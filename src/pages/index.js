@@ -3,10 +3,13 @@ const Home = () => {
   const { register, handleSubmit } = useForm()
   return (
     <form onSubmit = { handleSubmit((data)=>{console.log(data)}) } >
-      <input name="name" {...register("fieldName")} />
+      <input {...register("fieldName1")} />
+      <input {...register("fieldName2")} />
+      <button type="submit">Submit</button>
     </form>
   );
-  // Output: Object { fieldName: "hello world" } //
 }
- 
 export default Home;
+
+// Output: Object { fieldName: "awesomes", fieldName1: "awesomes", fieldName2: 2 } //
+
