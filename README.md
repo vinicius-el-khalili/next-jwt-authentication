@@ -67,9 +67,7 @@ Both cookies and localStorage are vulnerable to XSS attacks. However, cookie-bas
 Refs:
 
 https://www.pivotpointsecurity.com/local-storage-versus-cookies-which-to-use-to-securely-store-session-tokens/
-
 https://blog.logrocket.com/javascript-developer-guide-browser-cookies/
-
 https://allaboutcookies.org/what-is-a-cookie-file
 
 
