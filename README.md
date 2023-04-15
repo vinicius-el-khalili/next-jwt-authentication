@@ -31,40 +31,47 @@ Here's how a regular authentication process occurs:
 1. User opens page for the first time
 2. User "signs in" (Fires request to server thar returns with a secure cookie)
 3. Client stores the secure cookie
-4. From here on, all requests to the server will include the secure cookie
+4. From here on, all requests to the server will include the secure cookie.
 
+Refs:
+
+https://www.youtube.com/watch?v=h6wBYWWdyYQ
 
 ## Storage mechanisms
 
-The two most common ways to store authentication data in the client side is through Web Storage API or Cookies. Let's talk about those. 
+The two most common ways to store authentication data in the client side is through localStorage or Cookies. Let's talk about those.
 
-### Web Storage API
+Refs: 
 
-Web Storage API consists on localStorage and sessionStorage . Local Storage is stored in a SQLite file in a subfolder in the user's profile. Windows, for example, stores it at "\AppData\Local\Google\Chrome\User Data\Default\Local Storage". Session storage is also a SQLite file, but it's not stored on the machine.
-localStorage is persistent (it maintains data after the browser is closed), while sessionStorage is non-persistent (only stores data for the current sesssion).
+https://web.dev/storage-for-the-web/
+
+### Web Storage API: localStorage and sessionStorage
+
+Web Storage API consists on localStorage and sessionStorage . Local Storage is stored in a SQLite file in a subfolder in the user's profile. Windows, for example, stores it at "\AppData\Local\Google\Chrome\User Data\Default\Local Storage".
+localStorage is persistent (it maintains data after the browser is closed), while sessionStorage is non-persistent (does not maintain data after the browser is closed).
 
 
-Reference: <a>https://blog.logrocket.com/localstorage-javascript-complete-guide/</a>
+Refs: 
+
+https://blog.logrocket.com/localstorage-javascript-complete-guide/
+
+https://www.geeksforgeeks.org/difference-between-local-storage-session-storage-and-cookies/
+
 
 ### Cookies
 
-Similarly to web storage api, cookies are stored in the local machine, but in the form of a text file. Cookies are nice, but very problematic. Using cookies, all data stored (relevant or not) is passed to the server in each request, causing band cluttering, performance issues and higher costs. This problem was solved by Web Storage API through the storage of data in the form key-value pairs (SQLite). Cookies can have a file size up to 4kB, while Web Storage API can store up to 5MB. Also, cookies are more susceptible to cyber attacks than Web Storage API.
+Similarly to web storage api, cookies are stored in the local machine, but in the form of a text file. Cookies are nice, but very problematic. Using cookies, all data stored (relevant or not) is passed to the server in each request, causing band cluttering, performance issues and higher costs. This problem was solved by Web Storage API through the storage of data in the form key-value pairs (SQLite). Cookies can have a file size up to 4kB, while Web Storage API can store up to 5MB.
 
-Overall, cookies are handy when transfering high-frequency light-weight non-sensitive data, but it doesn't stand a chance against Web Storage API when dealing with more complex implementations.
+Both cookies and localStorage are vulnerable to XSS attacks. However, cookie-based token storage is more likely to mitigate these types of attacks if implemented securely.
 
-References:
+Refs:
 
-1. https://blog.logrocket.com/javascript-developer-guide-browser-cookies/
+https://www.pivotpointsecurity.com/local-storage-versus-cookies-which-to-use-to-securely-store-session-tokens/
 
-2. https://allaboutcookies.org/what-is-a-cookie-file
+https://blog.logrocket.com/javascript-developer-guide-browser-cookies/
 
-3. https://goadopt.io/blog/diferenca-cookies-local-storage-session-storage/
+https://allaboutcookies.org/what-is-a-cookie-file
 
-4. https://www.geeksforgeeks.org/difference-between-local-storage-session-storage-and-cookies/
-
-5. https://web.dev/storage-for-the-web/
-
-6. https://www.youtube.com/watch?v=h6wBYWWdyYQ
 
 ### Tokens
 
