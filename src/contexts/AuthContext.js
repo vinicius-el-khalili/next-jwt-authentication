@@ -1,4 +1,14 @@
-const signIn = (data) => {
-    console.log(data)
+import { createContext } from "react";
+
+export const AuthContext = createContext({})
+
+export function AuthProvider({children}) {
+    return (
+        <AuthContext.Provider value={{
+            
+        }}>
+
+            {children}
+        </AuthContext.Provider>
+    )
 }
-export default signIn
