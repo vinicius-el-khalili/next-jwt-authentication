@@ -43,6 +43,7 @@ Cookies can be handy when dealing with light-weight non-sensitive data, but shou
 References:
 
 <a>https://blog.logrocket.com/javascript-developer-guide-browser-cookies/</a>
+
 <a>https://allaboutcookies.org/what-is-a-cookie-file</a>
 
 ### Tokens
