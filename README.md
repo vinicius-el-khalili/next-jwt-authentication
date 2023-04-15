@@ -24,9 +24,14 @@ export default Home;
 
 ## Auth?
 
-Auth stands for authentication and authorization. Here's how it goes: Depending on the kind of request made to the server, some kind of authentication may be necessary. Otherwise, any punk can request the server to implode itself into a black hole or some shit. So yeah...
+Auth stands for authentication and authorization. Here's how it goes: Depending on the kind of request made to the server, some kind of authentication may be necessary.
 
-Here's how a regular authentication process occurs: Authentication data of some sort (email, password, id etc.) is passed from the client to the server through a request. Then, the server deals it and returns a response. It's that simple.
+Here's how a regular authentication process occurs:
+
+1. User opens page for the first time
+2. User "signs in" (Fires request to server thar returns with a secure cookie)
+3. Client stores the secure cookie
+4. From here on, all requests to the server will include the secure cookie
 
 
 ## Storage mechanisms
@@ -58,6 +63,8 @@ References:
 4. https://www.geeksforgeeks.org/difference-between-local-storage-session-storage-and-cookies/
 
 5. https://web.dev/storage-for-the-web/
+
+6. https://www.youtube.com/watch?v=h6wBYWWdyYQ
 
 ### Tokens
 
