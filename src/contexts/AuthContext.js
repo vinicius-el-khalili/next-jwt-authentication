@@ -4,7 +4,11 @@ import { signInRequest } from "../services/simulateAuthReponse"
 export const AuthContext = createContext({})
 
 export function AuthProvider({children}) {
+
+    
     const isAuthenticated = false
+    
+    
     async function signIn({ email, password }) {
         const { token, user } = await signInRequest({
             email,
@@ -12,6 +16,7 @@ export function AuthProvider({children}) {
         })
         console.log(email,password,token,user)
     }
+
 
     return (
         <AuthContext.Provider value={{
