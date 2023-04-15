@@ -51,9 +51,12 @@ Web Storage API consists on localStorage and sessionStorage . Local Storage is s
 localStorage is persistent (it maintains data after the browser is closed), while sessionStorage is non-persistent (does not maintain data after the browser is closed).
 
 
+
 Refs:
 
 https://developer.mozilla.org/en-US/docs/Web/API/Storage
+
+https://upmostly.com/next-js/using-localstorage-in-next-js
 
 https://blog.logrocket.com/localstorage-javascript-complete-guide/
 
@@ -95,6 +98,14 @@ https://stackoverflow.com/questions/44133536/is-it-safe-to-store-a-jwt-in-locals
 https://stackoverflow.com/questions/3220660/local-storage-vs-cookies
 
 
+## Cookies in Next.js
 
-### Token-base Authentication
+There are plenty of libraries for using cookies in next.js/react. Here are some of them:
 
+https://github.com/maticzav/nookies 
+
+https://github.com/js-cookie/js-cookie
+
+https://github.com/reactivestack/cookies/tree/master/packages/universal-cookie
+
+We'll proceed with the first one: nookies.
