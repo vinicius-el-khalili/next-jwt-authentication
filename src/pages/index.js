@@ -1,15 +1,15 @@
-import { useForm } from "react-hook-form"
-const Home = () => {
+import Home from "./home/home"
+
+const Index = () => {
   const { register, handleSubmit } = useForm()
   return (
-    <form onSubmit = { handleSubmit((data)=>{console.log(data)}) } >
-      <input {...register("fieldName1")} />
-      <input {...register("fieldName2")} />
-      <button type="submit">Submit</button>
-    </form>
+    <>
+    
+    <Home></Home>    
+    
+    </>
   );
 }
-export default Home;
+export default Index;
 
-// Output: Object { fieldName: "awesomes", fieldName1: "awesomes", fieldName2: 2 } //
 
