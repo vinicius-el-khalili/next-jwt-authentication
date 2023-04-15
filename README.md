@@ -22,14 +22,21 @@ export default Home;
 // Output: Object { fieldName: "awesomes", fieldName1: "awesomes", fieldName2: 2 } //
 ```
 
-## Let's talk about Auth
+## Auth?
 
-Auth stands for authentication and authorization. Some kind of authentication data (like an id, or a key) is somehow stored in the client session.
+Auth stands for authentication and authorization. Here's how it goes: Depending on the kind of request made to the server, some kind of authentication may be necessary. Otherwise, any punk can request the server to implode itself into a black hole or some shit. So yeah...
 
-Usually, authentication data is stored on the client side through Web Storage API, Cookies or Tokens.
+Here's how a regular authentication process occurs: Authentication data of some sort (email, password, id etc.) is passed from the client to the server through a request. Then, the server deals it and returns a response. It's that simple.
+
+
+## Storage mechanisms
+
+The two most common ways to store authentication data in the client side is through Web Storage API or Cookies. Let's talk about those. 
 
 ### Web Storage API
-Web Storage API consists on localStorage and sessionStorage . Local Storage is stored in a SQLite file in a subfolder in the user's profile. Windows, for example, stores it at "\AppData\Local\Google\Chrome\User Data\Default\Local Storage". Session storage is also a SQLite file, but it's not stored on the machine. Basically, localStorage maintains data after the browser is closed, while sessionStorage only stores data for the current sesssion.
+
+Web Storage API consists on localStorage and sessionStorage . Local Storage is stored in a SQLite file in a subfolder in the user's profile. Windows, for example, stores it at "\AppData\Local\Google\Chrome\User Data\Default\Local Storage". Session storage is also a SQLite file, but it's not stored on the machine.
+localStorage is persistent (it maintains data after the browser is closed), while sessionStorage is non-persistent (only stores data for the current sesssion).
 
 
 Reference: <a>https://blog.logrocket.com/localstorage-javascript-complete-guide/</a>
@@ -42,9 +49,15 @@ Overall, cookies are handy when transfering high-frequency light-weight non-sens
 
 References:
 
-<a>https://blog.logrocket.com/javascript-developer-guide-browser-cookies/</a>
+1. https://blog.logrocket.com/javascript-developer-guide-browser-cookies/
 
-<a>https://allaboutcookies.org/what-is-a-cookie-file</a>
+2. https://allaboutcookies.org/what-is-a-cookie-file
+
+3. https://goadopt.io/blog/diferenca-cookies-local-storage-session-storage/
+
+4. https://www.geeksforgeeks.org/difference-between-local-storage-session-storage-and-cookies/
+
+5. https://web.dev/storage-for-the-web/
 
 ### Tokens
 
