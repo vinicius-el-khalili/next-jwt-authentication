@@ -29,5 +29,6 @@ Auth stands for authentication and authorization. Some kind of authentication da
 Usually, authentication data is stored on the client side through Web Storage API, Cookies or Tokens.
 
 Web Storage API consists on localStorage and sessionStorage . Local Storage is stored in a SQLite file in a subfolder in the user's profile. Windows, for example, stores it at "\AppData\Local\Google\Chrome\User Data\Default\Local Storage". Session storage is also a SQLite file, but it's not stored on the machine. Basically, localStorage maintains data after the browser is closed, while sessionStorage only stores data for the current sesssion.
+
 Here's a great article about local storage: <a>https://blog.logrocket.com/localstorage-javascript-complete-guide/<a>
 
