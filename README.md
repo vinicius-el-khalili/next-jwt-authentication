@@ -36,9 +36,9 @@ Reference: <a>https://blog.logrocket.com/localstorage-javascript-complete-guide/
 
 ### Cookies
 
-Similarly to web storage api, cookies are stored in the local machine, but in the form of a text file. Cookies are nice, but very problematic. Using cookies, all data stored is passed to the server in each request, causing cluttering, performance issues and higher costs. This problem was solved by Web Storage API through the storage of data in the form key-value pairs (SQLite). Also, cookies are more susceptible to cyber attacks than Web Storage API.
+Similarly to web storage api, cookies are stored in the local machine, but in the form of a text file. Cookies are nice, but very problematic. Using cookies, all data stored (relevant or not) is passed to the server in each request, causing band cluttering, performance issues and higher costs. This problem was solved by Web Storage API through the storage of data in the form key-value pairs (SQLite). Cookies can have a file size up to 4kB, while Web Storage API can store up to 5MB. Also, cookies are more susceptible to cyber attacks than Web Storage API.
 
-Cookies can be handy when dealing with light-weight non-sensitive data, but should not be overused.
+Overall, cookies are handy when transfering high-frequency light-weight non-sensitive data, but it doesn't stand a chance against Web Storage API when dealing with more complex implementations.
 
 References:
 
