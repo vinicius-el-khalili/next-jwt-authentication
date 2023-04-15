@@ -1,25 +1,33 @@
 import style from "./loginFormulary.module.scss"
 import { useForm } from "react-hook-form"
+import { useContext } from "react"
+import { AuthContext } from "../../contexts/AuthContext"
 
 const LoginFormulary = () => {
+
+  const authContext = useContext(AuthContext)
   const { register, handleSubmit } = useForm()
   const handleSignIn = (data) => {
-    console.log(data)
+    console.log("handleSignIn(data)")
+    authContext.signIn(data)
   }
+  
+  
   return (
+
+
     <form 
     onSubmit = { handleSubmit(handleSignIn) } 
     className={style.form}>
       
       <label
-      htmlFor="email-adress"
       className={style.label}>
       
         Email adress
       </label>
       
       <input 
-      {...register("emailAdress")}
+      {...register("email")}
       className={style.input}
       type="email" 
       autoComplete="email" 
@@ -27,7 +35,6 @@ const LoginFormulary = () => {
       placeholder="Email address"/>
 
       <label 
-      htmlFor="email-adress"
       className={style.label}>
 
         Password
@@ -49,6 +56,8 @@ const LoginFormulary = () => {
       </button>
       
     </form>
+
+    
   );
 }
 export default LoginFormulary;
