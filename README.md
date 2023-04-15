@@ -28,8 +28,22 @@ Auth stands for authentication and authorization. Some kind of authentication da
 
 Usually, authentication data is stored on the client side through Web Storage API, Cookies or Tokens.
 
+### Web Storage API
 Web Storage API consists on localStorage and sessionStorage . Local Storage is stored in a SQLite file in a subfolder in the user's profile. Windows, for example, stores it at "\AppData\Local\Google\Chrome\User Data\Default\Local Storage". Session storage is also a SQLite file, but it's not stored on the machine. Basically, localStorage maintains data after the browser is closed, while sessionStorage only stores data for the current sesssion.
 
 
-Here's a great article about local storage: <a>https://blog.logrocket.com/localstorage-javascript-complete-guide/<a>
+Reference: <a>https://blog.logrocket.com/localstorage-javascript-complete-guide/</a>
+
+### Cookies
+
+Similarly to web storage api, cookies are stored in the local machine, but in the form of a text file. Cookies are nice, but very problematic. Using cookies, all data stored is passed to the server in each request, causing cluttering, performance issues and higher costs. This problem was solved by Web Storage API through the storage of data in the form key-value pairs (SQLite). Also, cookies are more susceptible to cyber attacks than Web Storage API.
+
+Cookies can be handy when dealing with light-weight non-sensitive data, but should not be overused.
+
+References:
+
+<a>https://blog.logrocket.com/javascript-developer-guide-browser-cookies/</a>
+<a>https://allaboutcookies.org/what-is-a-cookie-file</a>
+
+### Tokens
 
