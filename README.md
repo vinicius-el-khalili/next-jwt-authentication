@@ -21,3 +21,14 @@ export default Home;
 
 // Output: Object { fieldName: "awesomes", fieldName1: "awesomes", fieldName2: 2 } //
 ```
+
+## Let's talk about Auth
+
+Auth stands for authentication and authorization. Some kind of authentication data (like an id, or a key) is somehow stored in the client session.
+
+Usually, authentication data is stored on the client side through Web Storage API, Cookies or Tokens.
+
+Web Storage API consists on localStorage and sessionStorage . Local Storage is stored in a SQLite file in a subfolder in the user's profile. Windows, for example, stores it at "\AppData\Local\Google\Chrome\User Data\Default\Local Storage". Session storage is also a SQLite file, but it's not stored on the machine. Basically, localStorage maintains data after the browser is closed, while sessionStorage only stores data for the current sesssion.
+
+See more at: <a>https://blog.logrocket.com/localstorage-javascript-complete-guide/<a>
+
