@@ -3,9 +3,12 @@ import { useForm } from "react-hook-form"
 
 const LoginFormulary = () => {
   const { register, handleSubmit } = useForm()
+  const handleSignIn = (data) => {
+    console.log(data)
+  }
   return (
     <form 
-    onSubmit = { handleSubmit((data)=>{console.log(data)}) } 
+    onSubmit = { handleSubmit(handleSignIn) } 
     className={style.form}>
       
       <label
